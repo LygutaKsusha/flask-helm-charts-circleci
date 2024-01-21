@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: 319385625986.dkr.ecr.us-east-1.amazonaws.com/flask-helm-chart
+  repository: <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/<AWS_ECR_REPO_NAME>
   pullPolicy: IfNotPresent
   tag: "latest"
 
