@@ -1,0 +1,25 @@
+replicaCount: 1
+
+image:
+  repository: 319385625986.dkr.ecr.us-east-1.amazonaws.com/flask-helm-chart
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+labels:
+  env: "staging"
+
+service:
+  port: 5000
+  targetPort: 5000
+  type: LoadBalancer
+
+replicaCount: 1
+
+autoscaling:
+  enabled: false
+
+ingress:
+  enabled: false
+
+imagePullSecrets:
+  - name: regcred
