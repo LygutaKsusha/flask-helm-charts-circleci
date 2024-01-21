@@ -3,20 +3,20 @@
 
 ## Local set up
 
-During development, if you would like to test the set up locally, you will need to set up a few additional things:
+During development, if you would like to test the setup locally, you will need to set up a few additional things:
 
-Install Docker for building Docker images locally (https://docs.docker.com/engine/install/).
-Install kubectl for testing the cluster locally (https://kubernetes.io/docs/tasks/tools/).
-Install AWS CLI and configure AWS credentials (https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
-Install eksctl for managing Kubernetes clusters on Amazon EKS (https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html).
+- Install Docker for building Docker images locally (https://docs.docker.com/engine/install/).
+- Install kubectl for testing the cluster locally (https://kubernetes.io/docs/tasks/tools/).
+- Install AWS CLI and configure AWS credentials (https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+- Install eksctl for managing Kubernetes clusters on Amazon EKS (https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html).
 
 ## AWS set up
 
 You could use existing resources in your account or provision new resources if you don’t have them created.
 
-Create a AWS ECR repository for hosting your Flask Docker images (https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html).
-Create a AWS ECR repository for hosting your Helm chart (https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html).
-Create an AWS ECR cluster for running your Kubernetes workload.
+- Create a AWS ECR repository for hosting your Flask Docker images (https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html).
+- Create a AWS ECR repository for hosting your Helm chart (https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html).
+- Create an AWS ECR cluster for running your Kubernetes workload.
 
 This example project uses CircleCI for CI/CD.
 Make sure that you use the same IAM user for creating the cluster and configuring the credentials on CircleCI.
@@ -26,9 +26,9 @@ Make sure that you use the same IAM user for creating the cluster and configurin
 Update the values.yaml file with values corresponding to your application and AWS configs.
 
 
-![EKS cluster](eks.png)
+![aws](aws.png)
 
-In general workflow should look like this:
+## In general, workflow should look like this:
 
 1. First login to account
 
@@ -69,7 +69,6 @@ helm install flask-helm oci://<AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.co
 ```
 8. Set up project in CircleCI with appropriate variables
 
-![aws](aws.png)
 ![variables](variables.png)
 ![build](build.png)
 
