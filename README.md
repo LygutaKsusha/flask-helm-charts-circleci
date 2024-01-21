@@ -1,3 +1,3 @@
 # flask-helm-charts-circleci
 
-Test repo set up
+Test repo settings
