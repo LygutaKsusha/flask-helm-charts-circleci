@@ -49,7 +49,7 @@ docker push <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/flask-hello-worl
 4. Before pushing the Helm chart you need to authenticate helm with AWS ECR.
 
 ```
-aws ecr get-login-password --region us-west-2 | helm registry login --username AWS --password-stdin <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com
+aws ecr get-login-password --region <AWS_REGION> | helm registry login --username AWS --password-stdin <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com
 ```
 
 5. Package the Helm chart
