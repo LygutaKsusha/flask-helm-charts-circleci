@@ -10,7 +10,7 @@ During development, if you would like to test the setup locally, you will need t
 - Install AWS CLI and configure AWS credentials (https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 - Install eksctl for managing Kubernetes clusters on Amazon EKS (https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html).
 
-## AWS set up
+## AWS set up should go here
 
 You could use existing resources in your account or provision new resources if you don’t have them created.
 
